@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trispace:wght@100;400;700&display=swap');
+@import "./background.css";
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.modal-active {
+    overflow: hidden;
+}
+
+.primary-gradient {
+    background: linear-gradient(266.42deg, theme('colors.gradients.primary.1') 0%, theme('colors.gradients.primary.2') 100%);
+}
+
+.secondary-gradient {
+    background: linear-gradient(45deg, theme('colors.gradients.secondary.1') 0%, theme('colors.gradients.secondary.2') 100%);
+}
+
+.card {
+    @apply shadow px-10 py-6 rounded-xl bg-white m-2 mt-16;
+}
+
+.card-image {
+    @apply relative overflow-hidden rounded-xl h-64 mb-3 -mt-16;
+}
+
+.card-text {
+    @apply text-primary text-xl mb-1;
+}
+
+.card-participants li {
+    @apply inline-block -ml-5 w-10 h-10 rounded-full border-solid border-white border-2 overflow-hidden;
+}
+
+.card-participants div {
+    height: 2.5rem;
+    background-color: #4F4F4F;
+}
+
+.section {
+    @apply mt-20;
+}
+
+.section-title {
+    @apply text-3xl text-left font-trispace;
+}
+
+.section-title-bottom-line {
+    @apply secondary-gradient w-8 h-1 rounded-full mb-4;
+}
+
+.header,
+.footer {
+    @apply primary-gradient;
+}
+
+.subscribe-button {
+    @apply secondary-gradient text-white rounded;
+}
+
+.search-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.background-images {
+    z-index: -1;
+    margin-top: 100vh;
+}
